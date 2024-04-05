@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pharmaceutical-main</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            margin: 0 auto;
+            width: 1260px;
+            height: 1000px;
+            border: 1px solid black;
+        }
+
+        .header {
+            width: 100%;
+            height: 60px;
+            border: 1px solid black;
+            display: flex;
+        }
+
+        .header1 {
+            width: 60px;
+            height: 100%;
+            border: 1px solid black;
+            
+        }
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .center {
+            width: 100%;
+            height: 1000px;
+            background-image: url(./images/main1.png);
+            display: flex;
+        }
+        .section1 {
+            width: 70%;
+            height: 100%;
+        }
+        .section2 {
+            width: 30%;
+            height: 1000px;
+            flex-wrap: wrap;
+            /* flex-wrap: wrap; */
+            /* display: inline-block; */
+            /* justify-content: right; */
+            /* align-items: center; */
+        }
+        .section2-1 {
+            
+            /* flex-wrap: wrap; */
+        }
+
+        .box {
+            width: 180px;
+            height: 280px;
+            border: 1px solid black;
+            /* display: inline-block; */
+            /* justify-content: center; */
+            /* align-items: center; */
+            align-content: center;
+            text-align: center;
+        }
+
+        p {
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header1"></div>
+            <a href="https://www.naver.com/"><img src="./images/namu.png" width="150" height="80%"></a>
+        </div>
+        <div class="center">
+            <ul>
+            <li><button type="button" data-role="none" role="button" tabindex="0">1</button></li>
+            <li><button type="button" data-role="none" role="button" tabindex="0">2</button></li>
+            </ul>
+            <div class="section1"></div>
+            <div class="section2">
+                <div class="box mall" style="background-color: #dd732a;"><h3>약사들을 위한 대화제약 이커머스</h3><br><a href=""><img src="./images/quick_click.png"></a></div>
+                <div class="box amalian" style="background-color: #767777;"><h3>독일제조 히알루론산<br>필러 아말리안</h3><br><a href=""><img src="./images/quick_click.png"></a></div>
+                <div class="box daehwa" style="background-color: #434054;"><h3>ABOUT</h3><h2>DAEHWA</h2><p>Dispensee in Handy</p><br><a href=""><img src="./images/moreview.png"></a></div>
+                <div class="box esg" style="background-color: #80b245;"><h3>ABOUT</h3><h2> ESG 경영</h2><p>대화제약 ESG소식</p><br><a href=""><img src="./images/moreview.png"></a></div>
+                <div class="box loxona" style="background-color: #56abda;"><h2>LOXONA</h2><p>국내 최초 붙이는<br>록소프로펜 첩부제 록소나</p><br><a href=""><img src="./images/quick_click.png"></a></div>
+                <div class="box biotic" style="background-color: #103393;"><p>인체유래 비피더스<br>장건강 유산균</p><br><a href=""><img src="./images/quick_click.png"></a></div>
+            </div>
+            
+        </div>
+    </div>
+    
+</body>
+</html>
