@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pharmaceutical-esg</title>
+    <link href="./accordion.css" rel="stylesheet" crossorigin="anonymous">
     <style>
         * {
             margin: 0;
@@ -12,9 +13,9 @@
             box-sizing: border-box;
         }
 
-        .container {
+        .container1 {
             margin: 0 auto;
-            width: 1263px;
+            width: 1280px;
             /* border: 1px solid black; */
         }
 
@@ -47,7 +48,7 @@
             align-items: center;
         }
 
-        button {
+        .language button {
             margin: 5px;
         }
 
@@ -130,12 +131,12 @@
         }
 
         .section1 {
-            width: 70%;
+            width: 72%;
             height: 100%;
         }
 
         .section2 {
-            width: 30%;
+            width: 28%;
             height: 100%;
             flex-wrap: wrap;
         }
@@ -353,7 +354,7 @@
         }
 
         @media screen and (max-width:1260px) {
-            .container {
+            .container1 {
                 width: 100%;
             }
 
@@ -448,10 +449,14 @@
         }
 
         .title3 {
-            height: 220px;
+            height: 200px;
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        .title3 button {
+            margin-top: 100px;
         }
 
         .btn {
@@ -459,10 +464,15 @@
             width: 290px;
             border-radius: 50px;
             font-size: 0.9rem;
+            border: 1px solid #f08208;
         }
 
         .btn:hover {
             background-color: #f08208;
+            color: white;
+        }
+
+        #btn_1 {
             color: white;
         }
 
@@ -485,6 +495,7 @@
             display: flex;
             border-bottom: 1px solid #dadada;
         }
+
         .box01 li {
             width: 50%;
             height: 75px;
@@ -494,20 +505,78 @@
             align-items: center;
             margin-left: 3%;
         }
+
         .box01 button {
             width: 170px;
             height: 38px;
             border: 1px solid #dadada;
         }
+
         .box01 button:hover {
             background-color: orange;
             color: white;
+        }
+
+        #accordionExample {
+            width: 80%;
+            margin-left: 10%;
+            margin-top: 5%;
+            margin-bottom: 10%;
+        }
+
+        .accordion-button {
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+
+        .accordion-item {
+            background-color: white;
+            display: none;
+
+        }
+
+        .accordion-button:hover {
+            background-color: orange;
+            color: white;
+        }
+
+        @media screen and (max-width:1000px) {
+            .title3 {
+                display: none;
+            }
+
+            .accordion-item {
+                display: block;
+            }
+        }
+
+        .quickmenu {
+            border: 1px solid orange;
+            position: fixed;
+            width: 101px;
+            background-color: orange;
+            text-align: center;
+            color: white;
+            right: 0;
+            top: 70%;
+            left: 90%;
+            z-index: 5;
+        }
+
+        @media (max-width:1100px) {
+            .quickmenu {
+                width: 10%;
+            }
+
+            .center {
+                width: 90%;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container1">
         <div class="sidebar">
             <div class="sideber1"><a>창닫기</a></div><br>
             <div class="sidebar2"><a href="./main.html"><img src="./images/namu.png" width="75%" height="4%"></a></div>
@@ -620,15 +689,55 @@
         </div>
         <br><br>
         <div class="title1">
-            <a href="./Privacy.html"><img src="./images/home_icon.png" width="14" height="18"></a>
+            <a href="./esg.html"><img src="./images/home_icon.png" width="14" height="18"></a>
             <span>&nbsp;>&nbsp;</span><a>지속가능경영</a>
             <span>&nbsp;>&nbsp;</span><a><strong>ESG 경영</strong></a>
         </div><br>
         <div class="title3">
-            <button class="btn" id="btn_1">ESG 경영</button>
-            <button class="btn" id="btn_2">ESG 인증서</button>
-            <button class="btn" id="btn_3">ESG 정책</button>
+            <button class="btn" id="btn_1" style="background-color: #f08208;"><strong>ESG 경영</strong></button>
+            <button class="btn" id="btn_2"><strong>ESG 인증서</strong></button>
+            <button class="btn" id="btn_3"><strong>ESG 정책</strong></button>
         </div>
+
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <!-- <h2 class="accordion-header"> -->
+                <button class="accordion-button" style="background-color: orange;" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                    aria-controls="collapseOne">
+                    ESG 경영
+                </button>
+                <!-- </h2> -->
+                <div id="collapseOne">
+                    <div class="accordion-item">
+                        <!-- <h2 class="accordion-header"> -->
+                        <button class="accordion-button collapsed" id="btn_5" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            ESG 인증서
+                        </button>
+                        <!-- </h2> -->
+                    </div>
+                    <div class="accordion-item">
+                        <!-- <h2 class="accordion-header"> -->
+                        <button class="accordion-button collapsed" id="btn_6" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            ESG 정책
+                        </button>
+                        <!-- </h2> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="quickmenu">
+            <ul>
+                <img src="./images/about_esg.jpg" width="100%" height="120%">
+                <li id="quick1">
+                    위로
+                </li>
+            </ul>
+        </div>
+
         <div class="title2">
             <img src="./images/title_bar.png" width="200" height="6">
             <p><strong>ESG 경영</strong></p><br><br>
@@ -651,7 +760,7 @@
             <p><span style="color:#f39c12"><strong>A</strong></span>ction 이 모든 것을 실천하는 기업</p>
         </div><br><br>
         <div class="center">
-            <p><img src="./images/SDGs.png"></p>
+            <p><img src="./images/SDGs.png" width="100%" height="100%"></p>
         </div>
         <div class="title2">
             <img src="./images/title_bar.png" width="200" height="6">
@@ -768,12 +877,25 @@
             window.scrollTo({ top: 350, behavior: 'smooth' });
         });
         document.querySelector('#btn_2').addEventListener('click', () => {
-            window.scrollTo({ top: 2250, behavior: 'smooth' });
+            window.scrollTo({ top: 2350, behavior: 'smooth' });
         });
         document.querySelector('#btn_3').addEventListener('click', () => {
             window.scrollTo({ top: 3550, behavior: 'smooth' });
         });
+        document.querySelector('#btn_5').addEventListener('click', () => {
+            window.scrollTo({ top: 2100, behavior: 'smooth' });
+        });
+        document.querySelector('#btn_6').addEventListener('click', () => {
+            window.scrollTo({ top: 3100, behavior: 'smooth' });
+        });
+        document.querySelector('#quick1').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>
